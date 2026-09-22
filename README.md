@@ -72,3 +72,18 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   return createSessionResponse(token, '/dashboard');
 };
 ```
+
+## Contributing
+
+This repo runs `pnpm run type-check`, `pnpm run test`, and `pnpm run build` in CI (`.github/workflows/ci.yml`) on every push to `main` and on every pull request.
+
+A pre-commit hook also runs `pnpm run type-check` locally before each commit, via one of two mechanisms:
+
+- **Husky (default)**: running `pnpm install` triggers the `prepare` script, which installs the hook in `.husky/pre-commit` automatically. No extra setup needed.
+- **Portable fallback**: if you don't run `pnpm install` (or opt out of Husky), enable the equivalent hook at `.githooks/pre-commit` with:
+
+  ```bash
+  git config core.hooksPath .githooks
+  ```
+
+Both hooks run the same check, so pick whichever fits your workflow.

@@ -21,7 +21,8 @@
   "scripts": {
     "build": "tsup",
     "type-check": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "husky"
   },
   "dependencies": {
     "@serafort/core": "link:../Javascript"
@@ -34,6 +35,7 @@
     "@remix-run/node": "^2.15.2",
     "@remix-run/server-runtime": "^2.15.2",
     "@types/node": "^22.0.0",
+    "husky": "^9.1.7",
     "tsup": "^8.3.5",
     "typescript": "^5.7.0",
     "vitest": "^2.1.0"
