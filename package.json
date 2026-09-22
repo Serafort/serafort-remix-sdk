@@ -1,0 +1,41 @@
+{
+  "name": "@serafort/remix",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Remix loader and action auth helpers, cookie session storage, and RBAC guards for Serafort.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@serafort/core": "link:../Javascript"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^2.0.0 || ^3.0.0",
+    "@remix-run/server-runtime": "^2.0.0 || ^3.0.0"
+  },
+  "devDependencies": {
+    "@remix-run/node": "^2.15.2",
+    "@remix-run/server-runtime": "^2.15.2",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
