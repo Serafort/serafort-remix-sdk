@@ -2,6 +2,7 @@
   "name": "@serafort/remix",
   "version": "0.1.0",
   "type": "module",
+  "packageManager": "pnpm@10.32.1",
   "description": "Remix loader and action auth helpers, cookie session storage, and RBAC guards for Serafort.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
